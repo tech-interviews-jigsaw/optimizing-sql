@@ -1,0 +1,25 @@
+Make sure you understand merge joins
+
+merge join 
+
+customers 
+.last_name hometown
+
+1. cassel  new york
+2. smith    san fran
+3. apple     boise
+
+{'cassel': [1], 'smith': [2], 'apple': [3]}
+
+* First hash the customers (above)
+
+Then do sequential scan of orders
+
+orders
+id orders.last_name, orders.product_name hometown
+1     cassel            watch              new york
+2     cassel            phone              new york
+3     smith            tv              san fran
+
+
+
